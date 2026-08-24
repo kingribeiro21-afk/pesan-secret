@@ -496,3 +496,32 @@ body {
   }
 
 }
+/* Header Surat (Foto & Teks Kesamping) */
+.header-surat {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.foto-surat {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.teks-header h2 {
+  margin: 0;
+  font-size: 20px;
+  color: #e092a1;
+}
+.teks-header p {
+  margin: 2px 0 0 0;
+  font-size: 13px;
+  color: #666;
+}
+  margin: 2px 0 0 0;
+  font-size: 13px;
+  color: #666;
+}
