@@ -2,15 +2,22 @@
 // UBAH KATA-KATA DI SINI
 // ================================
 const pesan = {
-  tanggal: "0625",
+  tanggal: "29/08/2026",
   salam: "Dear Love,",
-  paragraf1: "Silva, kamu adalah salah satu orang yang bisa bikin hari-hari biasa terasa lebih berarti. Sederhana, tapi selalu punya cara sendiri buat bikin aku senang.",
-  paragraf2: "Makasih ya, udah jadi bagian dari perjalanan cintaku. Banyak hal yang kita lewati, dan semuanya bakal tetap jadi cerita yang aku ingat..",
-  paragraf3: "Aku cuma mau kamu selalu bahagia dan tetap jadi diri kamu sendiri. Jangan lupa senyum, karena aku suka lihat kamu bahagia.",
-  paragraf4: "Aku nggak mau banyak janji atau kata-kata manis. Aku cuma mau bilang, kamu punya tempat yang spesial buat aku. .",
-  paragraf5: "alau nanti kita sama-sama sibuk dengan kehidupan masing-masing, semoga kamu tetap ingat sama aku, Fauzan, yang pernah tulus sayang dan peduli sama kamu.",
-  paragraf6: "Kalau suatu hari kamu baca ini lagi, ingat satu hal: kamu pernah sangat berarti buat aku. Semoga kamu selalu baik-baik dan bahagia. ❤️",
-  penutup: "Yours forever,<br>Me ❤️"
+
+  paragraf1: "Silva yang paling cantik dan imup, makasih ya udah hadir di hari-hari aku.",
+
+  paragraf2: "Ada kamu, hal sederhana jadi lebih seru.",
+
+  paragraf3: "Aku senang bisa kenal dan punya cerita bareng kamu.",
+
+  paragraf4: "Aku nggak banyak janji, tapi aku tulus sayang sama kamu.",
+
+  paragraf5: "Tetap jadi Silva yang aku kenal ya sayang, dan jangan lupa bahagia.",
+
+  paragraf6: "Makasih udah pernah jadi bagian dari cerita aku. ❤️",
+
+  penutup: "Yours forever,<br>Fauzan ❤️"
 };
 
 // Isi teks surat
@@ -56,4 +63,4 @@ function toggleMusic() {
     music.pause();
     musicButton.textContent = "🔇";
   }
-}
+} 
