@@ -1,4 +1,80 @@
 /* ==============================
+   MUSIK OTOMATIS
+============================== */
+
+const bgMusic = document.getElementById("bgMusic");
+const musicOverlay = document.getElementById("musicOverlay");
+const startMusic = document.getElementById("startMusic");
+
+function startBackgroundMusic() {
+  if (!bgMusic) return;
+
+  bgMusic.volume = 0.7;
+
+  const musicPromise = bgMusic.play();
+
+  if (musicPromise !== undefined) {
+    musicPromise
+      .then(() => {
+        if (musicOverlay) {
+          musicOverlay.classList.add("hidden");
+        }
+      })
+      .catch(() => {
+        // Autoplay diblokir browser
+        if (musicOverlay) {
+          musicOverlay.classList.remove("hidden");
+        }
+      });
+  }
+}
+
+// Coba jalankan musik saat website dibuka
+window.addEventListener("load", () => {
+  startBackgroundMusic();
+});
+
+// Jika autoplay diblokir, klik pertama akan menjalankan musik
+document.addEventListener(
+  "click",
+  () => {
+    if (bgMusic && bgMusic.paused) {
+      bgMusic.play().catch(() => {});
+    }
+
+    if (musicOverlay) {
+      musicOverlay.classList.add("hidden");
+    }
+  },
+  { once: true }
+);
+
+// Tombol "Masuk & Putar Musik"
+if (startMusic) {
+  startMusic.addEventListener("click", (event) => {
+    event.stopPropagation();
+
+    if (bgMusic) {
+      bgMusic.volume = 0.7;
+
+      bgMusic
+        .play()
+        .then(() => {
+          if (musicOverlay) {
+            musicOverlay.classList.add("hidden");
+          }
+        })
+        .catch(() => {
+          alert(
+            "Musik tidak bisa diputar. Pastikan file musik ada di folder website."
+          );
+        });
+    }
+  });
+}
+
+
+/* ==============================
    MENGAMBIL ELEMENT HTML
 ============================== */
 
@@ -10,7 +86,6 @@ const tease =
 
 const letterPage =
   document.getElementById("letterPage");
-
 
 const openEnvelope =
   document.getElementById("openEnvelope");
@@ -37,9 +112,7 @@ function showPage(page) {
 
   letterPage.classList.remove("active");
 
-
   page.classList.add("active");
-
 }
 
 
@@ -112,7 +185,6 @@ noBtn.addEventListener(
 
     const y =
       Math.random() * 35 - 17;
-
 
     noBtn.style.transform =
       "translate(" +
