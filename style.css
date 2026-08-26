@@ -525,3 +525,40 @@ body {
   font-size: 13px;
   color: #666;
 }
+
+
+/* ==============================
+   TOMBOL MUSIK / AUTOPLAY FALLBACK
+============================== */
+
+.music-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(17, 17, 17, 0.75);
+  backdrop-filter: blur(4px);
+}
+
+.music-overlay.hidden {
+  display: none;
+}
+
+.music-start {
+  border: 0;
+  border-radius: 25px;
+  padding: 12px 22px;
+  background: #fff4a8;
+  color: #4c4632;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.music-start:active {
+  transform: scale(0.96);
+}
