@@ -44,3 +44,244 @@ body{margin:0;min-height:100vh;display:flex;justify-content:center;align-items:c
 .big-heart{font-size:50px}
 .date{font-size:17px;right:-35px;top:-35px}
 }
+
+
+
+/* =====================================================
+   MOBILE PREMIUM - khusus HP
+   ===================================================== */
+@media (max-width:600px){
+
+  html,body{
+    width:100%;
+    min-height:100%;
+  }
+
+  body{
+    min-height:100svh;
+    overflow:hidden;
+  }
+
+  /* Opening */
+  .opening{
+    width:100%;
+    min-height:100svh;
+    padding:24px 20px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+  }
+
+  .envelope-icon{
+    font-size:72px;
+    margin-bottom:8px;
+  }
+
+  .opening h1{
+    font-size:clamp(28px,8vw,38px);
+    line-height:1.15;
+    margin:5px 0 10px;
+  }
+
+  .opening p{
+    max-width:310px;
+    margin:0 auto 20px;
+    font-size:14px;
+    line-height:1.6;
+  }
+
+  .opening button{
+    min-height:50px;
+    padding:13px 30px;
+    font-size:15px;
+  }
+
+  /* Main scene */
+  .scene{
+    width:100vw;
+    height:100svh;
+    min-height:100vh;
+    overflow:hidden;
+  }
+
+  /* Envelope background */
+  .envelope{
+    width:84vw;
+    height:53vw;
+    max-width:390px;
+    max-height:245px;
+    left:50%;
+    top:51%;
+    border-radius:2px;
+    transform:translate(-50%,-50%) rotate(-5deg);
+  }
+
+  .envelope:before{
+    border-left-width:42vw;
+    border-right-width:42vw;
+    border-top-width:28vw;
+  }
+
+  /* Letter */
+  .paper{
+    width:68vw;
+    max-width:285px;
+    min-height:0;
+    height:auto;
+    max-height:68svh;
+    overflow:hidden;
+    left:50%;
+    top:49%;
+    padding:25px 19px 23px;
+    border-radius:4px;
+    transform:translate(-17%,-50%) rotate(4deg);
+    box-shadow:7px 12px 24px rgba(0,0,0,.28);
+  }
+
+  .paper:before{
+    inset:8px;
+  }
+
+  .date{
+    top:-25px;
+    right:-13px;
+    font-size:13px;
+    transform:rotate(-6deg);
+  }
+
+  .letter-text{
+    font-size:11px;
+    line-height:1.45;
+  }
+
+  .letter-text h2{
+    font-size:17px;
+    margin:0 0 12px;
+  }
+
+  .letter-text p{
+    margin:0 0 10px;
+  }
+
+  .signature{
+    margin-top:13px;
+    font-size:13px;
+    line-height:1.35;
+  }
+
+  .big-heart{
+    right:8px;
+    bottom:5px;
+    font-size:39px;
+  }
+
+  /* Photo card */
+  .polaroid{
+    width:29vw;
+    max-width:118px;
+    min-width:90px;
+    left:3vw;
+    bottom:13vh;
+    padding:7px 7px 4px;
+    border-radius:2px;
+    transform:rotate(-8deg);
+    box-shadow:4px 9px 17px rgba(0,0,0,.25);
+  }
+
+  .polaroid img{
+    width:100%;
+    height:28vw;
+    max-height:105px;
+    min-height:78px;
+    object-fit:cover;
+  }
+
+  .photo-text{
+    padding:5px 2px 6px;
+    font-size:10px;
+  }
+
+  /* Decorations */
+  .flower{
+    right:1vw;
+    top:41%;
+    font-size:42px;
+  }
+
+  .star{
+    left:2vw;
+    bottom:5vh;
+    font-size:36px;
+  }
+
+  .music-button{
+    width:48px;
+    height:48px;
+    right:14px;
+    bottom:14px;
+    font-size:19px;
+  }
+}
+
+/* HP kecil */
+@media (max-width:380px){
+
+  .paper{
+    width:70vw;
+    max-width:270px;
+    padding:23px 16px 21px;
+    transform:translate(-16%,-50%) rotate(4deg);
+  }
+
+  .letter-text{
+    font-size:10px;
+    line-height:1.42;
+  }
+
+  .letter-text h2{
+    font-size:15px;
+  }
+
+  .signature{
+    font-size:12px;
+  }
+
+  .polaroid{
+    width:28vw;
+    min-width:82px;
+    left:2vw;
+  }
+
+  .polaroid img{
+    height:27vw;
+    min-height:70px;
+  }
+
+  .photo-text{
+    font-size:9px;
+  }
+
+  .flower{
+    font-size:35px;
+  }
+
+  .star{
+    font-size:30px;
+  }
+
+  .big-heart{
+    font-size:34px;
+  }
+}
+
+/* HP tinggi: beri ruang lebih lega */
+@media (max-width:600px) and (min-height:750px){
+  .paper{
+    max-height:64svh;
+  }
+
+  .polaroid{
+    bottom:12vh;
+  }
+}
